@@ -1,16 +1,32 @@
 <template>
-    <h2>Contact Details</h2>
-    <p><strong>website : </strong>www.google.com</p>
-    <p><strong>Location : </strong>Dhaka, Bangladesh</p>
-    <p><strong>Phone : </strong>01915-985336</p>
+    <div  class="contact">
+        <h2 class="contact-heading">Contact Details</h2>
+        <p><strong>Name : </strong>{{ name }}</p>
+        <p><strong>Website : </strong>{{ websiteAddress }}</p>
+        <p><strong>Address : </strong>{{ address }}</p>
+    </div>    
 </template>
 
 <script>
    export default {
+       props : ["name", "websiteAddress","address"] ,
        data(){
            return {
-               name:"Mamunur Rahman"
+               
            };
        },
    }
 </script>
+
+<style scoped>
+
+    .contact{
+        border: 1px solid gray;
+        margin: 11px 22px;
+        padding: 22px;
+    }
+    .contact-heading{
+       color: rgb(0, 73, 107); 
+    }
+
+</style>
