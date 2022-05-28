@@ -1,19 +1,27 @@
 <template>
-  <div>
-    <h2>{{ msg }}</h2>
-    <!-- uses contact-details components from ContactDetails.vue page-->
+  <div class="container">
+    <header>
+      <h2>{{ msg }}</h2>
+    </header>
 
-    <contact-details name="Mamunur Rashid" website-address="https://google.com" address="Dhaka , Bangladesh"></contact-details>
-    <contact-details name="Mamunur Rashid" website-address="https://google.com" address="Dhaka , Bangladesh"></contact-details>
-    <contact-details name="Mamunur Rashid" website-address="https://google.com" address="Dhaka , Bangladesh"></contact-details>
-    
+    <div>
+      <the-card cardTitle="About Me"> Hi, this is testing... </the-card>
+      <the-card cardTitle="Samsung Mobile">
+        
+      </the-card>
+      <the-card cardTitle="Test Card">
+          
+      </the-card>
+    </div>
 
-    <!-- uses contact-details components from ContactDetails.vue page-->
+    <!-- uses the-card components from ContactDetails.vue page-->
+
+    <!-- uses the-card components from ContactDetails.vue page-->
   </div>
 </template>
 
 <script>
-import ContactDetails from "./ContactDetails.vue";
+import TheCard from "./TheCard.vue"; //includes TheCard.vue page into App.vue page
 
 export default {
   data() {
@@ -21,8 +29,6 @@ export default {
       msg: "Mamunur Rahman",
     };
   },
-  components: { ContactDetails },
+  components: { TheCard }, //register the TheCard
 };
 </script>
-
-
