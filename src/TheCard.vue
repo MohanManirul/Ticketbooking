@@ -1,19 +1,22 @@
 <template>
   <div class="the-card">
-    <div class="the-card_title">
-      {{ cardTitle }}
+    <div class="the-card__title">
+     {{ CardTitle }}
     </div>
-    <div class="the-card_body">
-      <slot>b</slot>
+    <div class="the-card__body">
+      <slot>
+        Default Card content
+      </slot>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: ["cardTitle"],
-};
+  export default {
+    props:["CardTitle"]
+  }
 </script>
+
 
 <style>
 .the-card {
@@ -22,12 +25,13 @@ export default {
   min-height: 200px;
   margin: 22px;
 }
-.the-card_title {
+.the-card__title {
   background: #167db1;
   padding: 5px 11px;
   color: #fff;
+  text-align: center;
 }
-.the-card_body {
+.the-card__body {
   padding: 11px;
 }
 .the-card_body img {

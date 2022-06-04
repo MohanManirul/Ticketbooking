@@ -1,34 +1,22 @@
 <template>
-  <div class="container">
-    <header>
-      <h2>{{ msg }}</h2>
-    </header>
-
-    <div>
-      <the-card cardTitle="About Me"> Hi, this is testing... </the-card>
-      <the-card cardTitle="Samsung Mobile">
-        
-      </the-card>
-      <the-card cardTitle="Test Card">
-          
-      </the-card>
-    </div>
-
-    <!-- uses the-card components from ContactDetails.vue page-->
-
-    <!-- uses the-card components from ContactDetails.vue page-->
+  <div>
+    <h3>{{ msg }}</h3>
+    <contact-details></contact-details>
+    <contact-details></contact-details>
+    <contact-details></contact-details>
   </div>
 </template>
 
 <script>
-import TheCard from "./TheCard.vue"; //includes TheCard.vue page into App.vue page
-
+import ContactDetails from "./ContactDetails.vue";
 export default {
-  data() {
+  data(){
     return {
-      msg: "Mamunur Rahman",
+      msg: "Welcome to  Vue 3 Bangla Tutorial"
     };
   },
-  components: { TheCard }, //register the TheCard
-};
+  components: {
+    ContactDetails
+  }
+}
 </script>
