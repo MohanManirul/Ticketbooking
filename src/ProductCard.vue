@@ -22,10 +22,20 @@
 
 <script>
   export default {
+      emits:{
+          'buy-now-clicked': function(data){
+              if(!data){
+                  console.log("data missing...");
+                  return false;
+              }else{
+                  return true;
+              }
+          }
+      },
       props: {product: {type:Object, default:()=>({})}},
       methods:{
           handlebuyClickNow(){
-              this.$emit("buy-now-clicked", this.product);
+              this.$emit("buy-now-clicked");
           },
           addToCartClicked(){
               this.$emit("add-to-cart-clicked");
